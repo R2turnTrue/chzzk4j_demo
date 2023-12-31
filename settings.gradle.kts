@@ -1,2 +1,2 @@
-rootProject.name = "KotlinPaperTemplate"
+rootProject.name = "demo"
 

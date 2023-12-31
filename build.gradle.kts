@@ -8,18 +8,22 @@ version = "1.0.0"
 
 repositories {
     mavenCentral()
+    //maven("https://jitpack.io")
+    mavenLocal()
     maven("https://papermc.io/repo/repository/maven-public/")
 }
 
 dependencies {
-    implementation(kotlin("stdlib"))
-    paperweight.paperDevBundle("1.20.2-R0.1-SNAPSHOT")
-    compileOnly("io.papermc.paper:paper-api:1.20.2-R0.1-SNAPSHOT")
+    compileOnly(kotlin("stdlib"))
+    paperweight.paperDevBundle("1.20.4-R0.1-SNAPSHOT")
+    compileOnly("io.papermc.paper:paper-api:1.20.4-R0.1-SNAPSHOT")
+    //implementation("com.github.R2turnTrue:chzzk4j:0.0.6")
+    implementation("xyz.r2turntrue:chzzk4j:1.0-SNAPSHOT")
 }
 
 
-//val shade = configurations.create("shade")
-//shade.extendsFrom(configurations.implementation.get())
+val shade = configurations.create("shade")
+shade.extendsFrom(configurations.implementation.get())
 
 java {
     toolchain.languageVersion.set(JavaLanguageVersion.of(17))
@@ -55,7 +59,8 @@ tasks {
     }
 
     jar {
-        //from (shade.map { if (it.isDirectory) it else zipTree(it) })
+        from (shade.map { if (it.isDirectory) it else zipTree(it) })
+        duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     }
 
     assemble {
