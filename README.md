@@ -7,6 +7,9 @@ A demo minecraft plugin using [chzzk4j](https://github.com/R2turnTrue/chzzk4j)
 - [x] when someone send chat, spawns wolf
 - [x] when someone donate, spawns iron golem
 
+## download
+download it from github releases
+
 ## building
 1. clone, and publish [chzzk4j](https://github.com/R2turnTrue/chzzk4j) to the local maven repository
 2. run `build` task
