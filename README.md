@@ -11,9 +11,8 @@ A demo minecraft plugin using [chzzk4j](https://github.com/R2turnTrue/chzzk4j)
 download it from github releases
 
 ## building
-1. clone, and publish [chzzk4j](https://github.com/R2turnTrue/chzzk4j) to the local maven repository
-2. run `build` task
-3. `build/libs/demo-1.0.0.jar`
+1. run `build` task
+2. `build/libs/demo-1.0.0.jar`
 
 ## screenshot
 ![image](https://github.com/R2turnTrue/chzzk4j_demo/assets/46389044/650006b8-1866-47e7-a400-313a58fff9d6)
