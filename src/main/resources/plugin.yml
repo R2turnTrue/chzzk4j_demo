@@ -1,0 +1,7 @@
+name: ExamplePlugin
+main: xyz.r2turntrue.explugin.ExPlugin
+version: 1.0.0
+
+libraries:
+  - org.jetbrains.kotlin:kotlin-stdlib:1.9.22
+  - org.jetbrains.kotlin:kotlin-reflect:1.9.22
