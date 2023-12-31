@@ -15,6 +15,7 @@ class ChzzkDemoPlugin : JavaPlugin() {
         val channelId = config.getString("channelId")
         val channel = chzzk.getChannel(channelId)
         println("Trying connect to ${channel.channelName} (${channel.followerCount} followers)")
+        chzzk.isDebug = true
         chat = chzzk.chat()
         chat.addListener(PluginChatListener(this))
         saveDefaultConfig()
