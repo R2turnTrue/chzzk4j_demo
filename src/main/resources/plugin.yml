@@ -6,4 +6,4 @@ api-version: 1.20
 libraries:
   - org.jetbrains.kotlin:kotlin-stdlib:1.9.22
   - org.jetbrains.kotlin:kotlin-reflect:1.9.22
-  - io.github.R2turnTrue:chzzk4j:0.0.2
+  - io.github.R2turnTrue:chzzk4j:0.0.7
