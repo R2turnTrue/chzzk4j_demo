@@ -11,18 +11,22 @@ lateinit var chat: ChzzkChat
 class ChzzkDemoPlugin : JavaPlugin() {
 
     override fun onEnable() {
+        saveDefaultConfig()
+
         chzzk = ChzzkBuilder().build()
         val channelId = config.getString("channelId")
         val channel = chzzk.getChannel(channelId)
         println("Trying connect to ${channel.channelName} (${channel.followerCount} followers)")
         //chzzk.isDebug = true
-        chat = chzzk.chat()
-        chat.addListener(PluginChatListener(this))
-        saveDefaultConfig()
-        chat.connectFromChannelId(channelId)
+
+        chat = chzzk.chat(channelId)
+            .withChatListener(PluginChatListener(this))
+            .build()
+
+        chat.connectBlocking()
     }
 
     override fun onDisable() {
-        chat.close()
+        chat.closeBlocking()
     }
 }

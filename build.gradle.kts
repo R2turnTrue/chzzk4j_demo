@@ -19,7 +19,7 @@ dependencies {
     compileOnly("io.papermc.paper:paper-api:1.20.4-R0.1-SNAPSHOT")
     //implementation("com.github.R2turnTrue:chzzk4j:0.0.6")
     //implementation("io.github.R2turnTrue:chzzk4j:1.0-SNAPSHOT")
-    compileOnly("io.github.R2turnTrue:chzzk4j:0.0.2")
+    compileOnly("io.github.R2turnTrue:chzzk4j:0.0.7")
 }
 
 
