@@ -12,7 +12,9 @@ import java.lang.Exception
 class PluginChatListener(val plugin: ChzzkDemoPlugin) : ChatEventListener {
     override fun onConnect(chat: ChzzkChat, isReconnecting: Boolean) {
         println("Connected to chat! requesting recent chats..")
-        chat.requestRecentChat(50)
+
+        if (!isReconnecting)
+            chat.requestRecentChat(50)
     }
 
     override fun onError(ex: Exception) {
